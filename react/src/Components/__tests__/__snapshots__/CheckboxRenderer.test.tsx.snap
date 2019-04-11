@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckboxRenderer renders correctly 1`] = `
+<div
+  className="TextInputRenderer-container-1"
+>
+  <WithStyles(FormControl)>
+    <WithStyles(WithFormControlContext(FormLabel))>
+      which day you like?
+    </WithStyles(WithFormControlContext(FormLabel))>
+    <WithStyles(FormGroup)>
+      <WithStyles(WithFormControlContext(FormControlLabel))
+        control={
+          <WithStyles(Checkbox)
+            value="0"
+          />
+        }
+        key="0"
+        label="Monday"
+      />
+      <WithStyles(WithFormControlContext(FormControlLabel))
+        control={
+          <WithStyles(Checkbox)
+            value="1"
+          />
+        }
+        key="1"
+        label="Tuesday"
+      />
+      <WithStyles(WithFormControlContext(FormControlLabel))
+        control={
+          <WithStyles(Checkbox)
+            value="2"
+          />
+        }
+        key="2"
+        label="Friday"
+      />
+    </WithStyles(FormGroup)>
+  </WithStyles(FormControl)>
+  <WithStyles(Button)
+    className="TextInputRenderer-deleteButton-2"
+    color="secondary"
+    onClick={[Function]}
+    variant="outlined"
+  >
+    Delete
+  </WithStyles(Button)>
+</div>
+`;

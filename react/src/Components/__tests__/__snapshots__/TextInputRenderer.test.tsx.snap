@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInputRenderer renders correctly 1`] = `
+<div
+  className="TextInputRenderer-container-1"
+>
+  <div>
+    <WithStyles(Typography)>
+      which day you like best?
+    </WithStyles(Typography)>
+    <TextField
+      key="1"
+      margin="normal"
+      onChange={[Function]}
+      placeholder="day"
+      required={false}
+      select={false}
+      value=""
+      variant="standard"
+    />
+  </div>
+  <WithStyles(Button)
+    className="TextInputRenderer-deleteButton-2"
+    color="secondary"
+    onClick={[Function]}
+    variant="outlined"
+  >
+    Delete
+  </WithStyles(Button)>
+</div>
+`;

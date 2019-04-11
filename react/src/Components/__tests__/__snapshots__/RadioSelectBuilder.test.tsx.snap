@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioSelectBuilder renders correctly 1`] = `
+<div>
+  <WithStyles(Typography)
+    className="RadioSelectBuilder-title-1"
+  >
+    Create a radio select
+  </WithStyles(Typography)>
+  <div
+    className="RadioSelectBuilder-fieldContainer-2"
+  >
+    <WithStyles(Typography)>
+      * Please add a question for your radio select (Must Have)
+    </WithStyles(Typography)>
+    <TextField
+      id="question"
+      label="Radio select question"
+      margin="normal"
+      onChange={[Function]}
+      required={false}
+      select={false}
+      value=""
+      variant="standard"
+    />
+  </div>
+  <div
+    className="RadioSelectBuilder-fieldContainer-2"
+  >
+    <WithStyles(Typography)>
+      * Please add selections for your radio select (Must Have)
+    </WithStyles(Typography)>
+    <WithStyles(Typography)>
+      *** Please use ### to seperate different selections
+    </WithStyles(Typography)>
+    <TextField
+      id="selections"
+      label="Radio select selections"
+      margin="normal"
+      onChange={[Function]}
+      required={false}
+      select={false}
+      value=""
+      variant="standard"
+    />
+  </div>
+  <WithStyles(Button)
+    className="RadioSelectBuilder-fieldContainer-2"
+    color="primary"
+    disabled={true}
+    onClick={[Function]}
+    variant="outlined"
+  >
+    Create Radio Select
+  </WithStyles(Button)>
+</div>
+`;

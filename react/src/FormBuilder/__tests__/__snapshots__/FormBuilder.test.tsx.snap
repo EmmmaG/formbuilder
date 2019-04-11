@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormBuilder renders correctly 1`] = `
+<div>
+  <WithStyles(Typography)>
+    Please select a field type to create
+  </WithStyles(Typography)>
+  <WithStyles(FormControl)
+    variant="outlined"
+  >
+    <WithStyles(WithFormControlContext(Select))
+      className="FormBuilder-select-1"
+      classes={
+        Object {
+          "root": "FormBuilder-selectRoot-2",
+        }
+      }
+      input={
+        <WithStyles(OutlinedInput)
+          id="type"
+          labelWidth={0}
+          name="field type"
+        />
+      }
+      native={true}
+      onChange={[Function]}
+      style={
+        Object {
+          "width": "250px",
+        }
+      }
+      value="textInput"
+    >
+      <option
+        key="textInput"
+        value="textInput"
+      >
+        Text Input
+      </option>
+      <option
+        key="radioSelect"
+        value="radioSelect"
+      >
+        Radio Select
+      </option>
+      <option
+        key="checkbox"
+        value="checkbox"
+      >
+        Checkbox
+      </option>
+    </WithStyles(WithFormControlContext(Select))>
+  </WithStyles(FormControl)>
+  <div>
+    <WithStyles(TextInputBuilder)
+      onCreate={[MockFunction]}
+    />
+  </div>
+</div>
+`;

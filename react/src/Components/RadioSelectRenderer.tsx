@@ -51,7 +51,7 @@ export class RadioSelectRenderer extends React.Component<Props, State> {
         const { field } = this.props
         const selections = field.selections.split('###')
 
-        return selections.map((s, i) => <FormControlLabel value={i.toString()} control={<Radio />} label={s} />)
+        return selections.map((s, i) => <FormControlLabel key={i} value={i.toString()} control={<Radio />} label={s} />)
     }
 
 	public render() {

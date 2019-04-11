@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RadioSelectRenderer renders correctly 1`] = `
+<div
+  className="RadioSelectRenderer-container-1"
+>
+  <WithStyles(FormControl)>
+    <WithStyles(WithFormControlContext(FormLabel))>
+      which day you like best?
+    </WithStyles(WithFormControlContext(FormLabel))>
+    <RadioGroup
+      name="which day you like best?"
+      onChange={[Function]}
+      value=""
+    >
+      <WithStyles(WithFormControlContext(FormControlLabel))
+        control={<WithStyles(Radio) />}
+        key="0"
+        label="Monday"
+        value="0"
+      />
+      <WithStyles(WithFormControlContext(FormControlLabel))
+        control={<WithStyles(Radio) />}
+        key="1"
+        label="Tuesday"
+        value="1"
+      />
+      <WithStyles(WithFormControlContext(FormControlLabel))
+        control={<WithStyles(Radio) />}
+        key="2"
+        label="Friday"
+        value="2"
+      />
+    </RadioGroup>
+  </WithStyles(FormControl)>
+  <WithStyles(Button)
+    className="RadioSelectRenderer-deleteButton-2"
+    color="secondary"
+    onClick={[Function]}
+    variant="outlined"
+  >
+    Delete
+  </WithStyles(Button)>
+</div>
+`;

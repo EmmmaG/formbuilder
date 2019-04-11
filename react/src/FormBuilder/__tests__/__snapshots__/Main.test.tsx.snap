@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main renders correctly 1`] = `
+<div
+  className="Main-container-1"
+>
+  <WithStyles(FormBuilder)
+    onFieldsCreate={[Function]}
+  />
+  <WithStyles(FormRenderer)
+    fields={Array []}
+    onDelete={[Function]}
+  />
+</div>
+`;

@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInputBuilder renders correctly 1`] = `
+<div>
+  <WithStyles(Typography)
+    className="TextInputBuilder-title-1"
+  >
+    Create a text input
+  </WithStyles(Typography)>
+  <div
+    className="TextInputBuilder-fieldContainer-2"
+  >
+    <WithStyles(Typography)>
+      * Please add a question for your text input (Must Have)
+    </WithStyles(Typography)>
+    <TextField
+      id="question"
+      label="Text input question"
+      margin="normal"
+      onChange={[Function]}
+      required={false}
+      select={false}
+      value=""
+      variant="standard"
+    />
+  </div>
+  <div
+    className="TextInputBuilder-fieldContainer-2"
+  >
+    <WithStyles(Typography)>
+      Please add a placeholder for your text input (Optional)
+    </WithStyles(Typography)>
+    <TextField
+      id="placeholder"
+      label="Text input placeholder"
+      margin="normal"
+      onChange={[Function]}
+      required={false}
+      select={false}
+      value=""
+      variant="standard"
+    />
+  </div>
+  <div
+    className="TextInputBuilder-fieldContainer-2"
+  >
+    <WithStyles(Typography)>
+      Please add a display label for your text input (Optional) 
+    </WithStyles(Typography)>
+    <TextField
+      id="label"
+      label="Text input label"
+      margin="normal"
+      onChange={[Function]}
+      required={false}
+      select={false}
+      value=""
+      variant="standard"
+    />
+  </div>
+  <div
+    className="TextInputBuilder-fieldContainer-2"
+  >
+    <WithStyles(Typography)>
+      Please add a default text for your text input (Optional)
+    </WithStyles(Typography)>
+    <TextField
+      id="defaultValue"
+      label="Text input defaultValue"
+      margin="normal"
+      onChange={[Function]}
+      required={false}
+      select={false}
+      value=""
+      variant="standard"
+    />
+  </div>
+  <WithStyles(Button)
+    className="TextInputBuilder-fieldContainer-2"
+    color="primary"
+    disabled={true}
+    onClick={[Function]}
+    variant="outlined"
+  >
+    Create Text Input
+  </WithStyles(Button)>
+</div>
+`;

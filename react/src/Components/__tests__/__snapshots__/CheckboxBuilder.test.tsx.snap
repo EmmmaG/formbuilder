@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckboxBuilder renders correctly 1`] = `
+<div>
+  <WithStyles(Typography)
+    className="CheckboxBuilder-title-1"
+  >
+    Create a checkbox
+  </WithStyles(Typography)>
+  <div
+    className="CheckboxBuilder-fieldContainer-2"
+  >
+    <WithStyles(Typography)>
+      * Please add a question for your checkbox (Must Have)
+    </WithStyles(Typography)>
+    <TextField
+      id="question"
+      label="Checkbox question"
+      margin="normal"
+      onChange={[Function]}
+      required={false}
+      select={false}
+      value=""
+      variant="standard"
+    />
+  </div>
+  <div
+    className="CheckboxBuilder-fieldContainer-2"
+  >
+    <WithStyles(Typography)>
+      * Please add selections for your checkbox (Must Have)
+    </WithStyles(Typography)>
+    <WithStyles(Typography)>
+      *** Please use ### to seperate different selections
+    </WithStyles(Typography)>
+    <TextField
+      id="selections"
+      label="Checkbox selections"
+      margin="normal"
+      onChange={[Function]}
+      required={false}
+      select={false}
+      value=""
+      variant="standard"
+    />
+  </div>
+  <WithStyles(Button)
+    className="CheckboxBuilder-fieldContainer-2"
+    color="primary"
+    disabled={true}
+    onClick={[Function]}
+    variant="outlined"
+  >
+    Create Radio Select
+  </WithStyles(Button)>
+</div>
+`;

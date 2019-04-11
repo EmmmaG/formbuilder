@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { withStyles, WithStyles } from '@material-ui/core/styles'
-import Radio from '@material-ui/core/Radio'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import FormControl from '@material-ui/core/FormControl'
 import FormGroup from '@material-ui/core/FormGroup'
@@ -54,6 +53,7 @@ export class TextInputRenderer extends React.Component<Props, State> {
 
         return selections.map((s, i) => (
             <FormControlLabel
+                key={i}
                 control={
                     <CheckboxComp value={i.toString()} />
                 }
