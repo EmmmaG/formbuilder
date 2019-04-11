@@ -86,8 +86,8 @@ export class CheckboxBuilder extends React.Component<Props, State> {
                 </div>
 
                 <div className={classes.fieldContainer}>
-                    <Typography>Please add selections for your checkbox (Must Have)</Typography>
-                    <Typography>Please use ### to seperate different selections</Typography>
+                    <Typography>* Please add selections for your checkbox (Must Have)</Typography>
+                    <Typography>*** Please use ### to seperate different selections</Typography>
 
                     <TextField
                         id='selections'
