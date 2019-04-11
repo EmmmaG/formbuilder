@@ -1,5 +1,6 @@
 import * as React from 'react'
-import { withStyles, WithStyles, Theme } from '@material-ui/core/styles'
+import { withStyles, WithStyles } from '@material-ui/core/styles'
+
 import FormBuilder, { Field } from './FormBuilder'
 import FormRenderer from './FormRenderer'
 
@@ -9,7 +10,7 @@ const styles = () => ({
         flexDirection: 'row' as 'row',
         justifyContent: 'space-evenly',
         flexWrap: 'wrap' as 'wrap',
-    }
+    },
 })
 
 export interface Props extends WithStyles<typeof styles> {
@@ -17,6 +18,7 @@ export interface Props extends WithStyles<typeof styles> {
 
 export interface State {
     fields: Field[]
+	isLoading: boolean
 }
 
 export class Main extends React.Component<Props, State> {
@@ -25,6 +27,7 @@ export class Main extends React.Component<Props, State> {
 
         this.state = {
             fields: [],
+			isLoading: false,
         }
     }
 
@@ -48,14 +51,27 @@ export class Main extends React.Component<Props, State> {
         this.setState({ fields: newFields })
     }
 
+    private fetchData = async() => {
+		this.setState({ isLoading: true})
+
+		await fetch('http://localhost:8001/fields')
+			.then(response => {
+				return response.json()
+			}).then(data => {
+				this.setState({ fields: data })
+			})
+
+		this.setState({ isLoading: false })
+	}
+
 
     public render() {
         const { classes } = this.props
-        const { fields } = this.state
+        const { fields, isLoading } = this.state
 
         return (
             <div className={classes.container}>
-                <FormBuilder onFieldsCreate={this.onFieldsCreate} />
+                <FormBuilder onFieldsCreate={this.onFieldsCreate} fetchData={this.fetchData}/>
                 <FormRenderer onDelete={this.onFieldDelete} fields={fields} />
             </div>
         )

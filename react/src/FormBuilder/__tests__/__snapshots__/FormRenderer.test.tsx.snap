@@ -9,29 +9,31 @@ exports[`FormRenderer renders correctly 1`] = `
   >
     Form Preview
   </WithStyles(Typography)>
-  <WithStyles(TextInputRenderer)
-    field={
-      Object {
-        "id": 1,
-        "placeholder": "day",
-        "question": "which day you like best?",
-        "type": "textInput",
+  <div>
+    <WithStyles(TextInputRenderer)
+      field={
+        Object {
+          "id": 1,
+          "placeholder": "day",
+          "question": "which day you like best?",
+          "type": "textInput",
+        }
       }
-    }
-    key="1"
-    onDelete={[Function]}
-  />
-  <WithStyles(TextInputRenderer)
-    field={
-      Object {
-        "id": 2,
-        "question": "which day you like?",
-        "selections": "Monday###Tuesday###Friday",
-        "type": "checkbox",
+      key="1"
+      onDelete={[Function]}
+    />
+    <WithStyles(TextInputRenderer)
+      field={
+        Object {
+          "id": 2,
+          "question": "which day you like?",
+          "selections": "Monday###Tuesday###Friday",
+          "type": "checkbox",
+        }
       }
-    }
-    key="2"
-    onDelete={[Function]}
-  />
+      key="2"
+      onDelete={[Function]}
+    />
+  </div>
 </WithStyles(Paper)>
 `;

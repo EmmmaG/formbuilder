@@ -4,6 +4,8 @@ import Typography from '@material-ui/core/Typography'
 import OutlinedInput from '@material-ui/core/OutlinedInput'
 import FormControl from '@material-ui/core/FormControl'
 import Select from '@material-ui/core/Select'
+import Button from '@material-ui/core/Button'
+
 import TextInputBuilder, { TextInput } from '../Components/TextInputBuilder'
 import RadioSelectBuilder, { RadioSelect } from '../Components/RadioSelectBuilder'
 import CheckboxBuilder, { Checkbox } from '../Components/CheckboxBuilder'
@@ -23,7 +25,8 @@ export type Field = TextInput | RadioSelect | Checkbox
 export type FieldType = 'textInput' | 'radioSelect' | 'checkbox'
 
 export interface Props extends WithStyles<typeof styles> {
-    onFieldsCreate: (field: Field) => void
+	onFieldsCreate: (field: Field) => void
+	fetchData: () => Promise<void>
 }
 
 export interface State {
@@ -76,7 +79,7 @@ export class FormBuilder extends React.Component<Props, State> {
 	}
 
 	public render() {
-        const { classes, onFieldsCreate } = this.props
+        const { classes } = this.props
 
 		return (
 			<div>
@@ -100,6 +103,15 @@ export class FormBuilder extends React.Component<Props, State> {
 						{this.renderOptions()}
 					</Select>
 				</FormControl>
+
+				<Typography>Or load a existing form from server</Typography>
+				<Button
+					variant='outlined'
+					color='primary'
+					onClick={this.props.fetchData}
+				>
+					Load saved form
+				</Button>
 
 				<div>
 					{this.renderFieldBuilder()}

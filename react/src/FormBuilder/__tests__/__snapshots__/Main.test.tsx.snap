@@ -5,6 +5,7 @@ exports[`Main renders correctly 1`] = `
   className="Main-container-1"
 >
   <WithStyles(FormBuilder)
+    fetchData={[Function]}
     onFieldsCreate={[Function]}
   />
   <WithStyles(FormRenderer)

@@ -51,6 +51,15 @@ exports[`FormBuilder renders correctly 1`] = `
       </option>
     </WithStyles(WithFormControlContext(Select))>
   </WithStyles(FormControl)>
+  <WithStyles(Typography)>
+    Or load a existing form from server
+  </WithStyles(Typography)>
+  <WithStyles(Button)
+    color="primary"
+    variant="outlined"
+  >
+    Load saved form
+  </WithStyles(Button)>
   <div>
     <WithStyles(TextInputBuilder)
       onCreate={[MockFunction]}

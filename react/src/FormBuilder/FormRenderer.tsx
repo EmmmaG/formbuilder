@@ -1,7 +1,9 @@
 import * as React from 'react'
-import { withStyles, WithStyles } from '@material-ui/core/styles'
+import { withStyles, WithStyles, Theme } from '@material-ui/core/styles'
 import Paper from '@material-ui/core/Paper'
 import Typography from '@material-ui/core/Typography'
+import CircularProgress from '@material-ui/core/CircularProgress'
+
 import { Field } from './FormBuilder'
 import { TextInput } from '../Components/TextInputBuilder'
 import { RadioSelect } from '../Components/RadioSelectBuilder'
@@ -11,7 +13,7 @@ import TextInputRenderer from '../Components/TextInputRenderer'
 import RadioSelectRenderer from '../Components/RadioSelectRenderer'
 import CheckboxRenderer from '../Components/CheckboxRenderer'
 
-const styles = () => ({
+const styles = (theme: Theme) => ({
     container: {
         minWidth: '400px',
         height: '100vh',
@@ -21,11 +23,19 @@ const styles = () => ({
         fontSize: '25px',
         margin: '10px',
     },
+    loaderContainer: {
+		textAlign: 'center' as 'center',
+	},
+	loader: {
+		color: theme.palette.grey[600],
+		marginTop: '50px',
+	},
 })
 
 export interface Props extends WithStyles<typeof styles> {
     fields: Field[]
     onDelete: (id: number) => void
+    isLoading?: boolean
 }
 
 export class FormRenderer extends React.Component<Props> {
@@ -54,13 +64,28 @@ export class FormRenderer extends React.Component<Props> {
     }
 
 	public render() {
-        const { classes } = this.props
+        const { classes, isLoading } = this.props
 
 		return (
 			<Paper className={classes.container}>
                 <Typography className={classes.title}>Form Preview</Typography>
 
-                {this.renderForms()}
+                <div>
+                    {
+                        isLoading && (
+                            <div className={classes.loaderContainer}>
+                                <CircularProgress
+                                    className={classes.loader}
+                                    size={100}
+                                    variant='indeterminate' />
+                            </div>
+                        )
+                    }
+                    {
+                        !isLoading && this.renderForms()
+                    }
+                </div>
+
             </Paper>
 		)
 	}
