@@ -1,0 +1,26 @@
+[
+    {
+        "id": "1",
+        "type": "textInput",
+        "question": "which day you like most?",
+        "placeholder": "day"
+    },
+    {
+        "id": "2",
+        "type": "textInput",
+        "question": "which day you don't like",
+        "placeholder": "day"
+    },
+    {
+        "id": "3",
+        "type": "radioSelect",
+        "question": "which fruit you like most",
+        "selections": "apple###pear###prange###peach"
+    },
+    {
+        "id": "4",
+        "type": "checkbox",
+        "question": "Select fruits you don't like",
+        "selections": "apple###pear###prange###peach"
+    }
+  ]
